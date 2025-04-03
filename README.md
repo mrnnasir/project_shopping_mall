@@ -11,7 +11,8 @@ This document will provide you the understanding in a simple way about how the a
 
 ## Dataset Content
 * Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
-I collected the dataset from kaggle, where numerous public dataset can be found to practice or learn about the real world scenarios. The dataset I had gathered for this specfic project has about 100000 rows of data that is comprised of information about following columns,
+
+I collected the dataset from Kaggle, where numerous public dataset can be found to practice or learn about the real world scenarios. The dataset I had gathered for this specfic project has about 100000 rows of data that is comprised of information about following columns,
 
     * Invoice_no
     * Customer_id
@@ -49,7 +50,7 @@ A marketing company wants to find out which shopping mall(s) usually customers p
 * List here your project hypothesis(es) and how you envision validating it (them) 
 - Customer may mostly pay cash and then debit card.
     - Correlation between shopping mall with payment method
-- Customer may mostly pay for clothing, food & beverage, cosmetics and books
+- Customer pay the most for clothing, food & beverage, cosmetics and books
     - Correlation between shopping mall and category
     - Correlation between category and price on quarterly average (approx.)
 - Costomer may shop mostly clothing, food & beverage and cosmetics
@@ -60,6 +61,8 @@ A marketing company wants to find out which shopping mall(s) usually customers p
     - Correlation between shopping mall and gender
 - Younger aged customer may pay more for book, food & beverage & older people may spend more money to clothing, cosmetics and technology
     - Correlation between average price and category on age level
+- Young people tend to buy more products than older people
+    - Correlation between age and quantity on an average
 - Male may pay more for gadgets than female, while female pays more for clothing and cosmetics
     - Correlation between average price and category on age level for male and female
 
@@ -76,6 +79,29 @@ In order to ensure all the details are covered, I used **Agile Methodology** and
 
 ## The rationale to map the business requirements to the Data Visualisations
 * List your business requirements and a rationale to map them to the Data Visualisations
+- Customer may mostly pay cash and then debit card.
+    - Using Seaborn Bar plot i see that, my hypothsis is partially correct as most used payment option is Cash. But 2nd most used option is credit card not debit bard.
+
+- Customer pay the most for clothing, food & beverage, cosmetics and books
+    - Matplotlib Bar Horizontal chart shows that customers mostly pay clothing, but 2nd and 3rd largest are shoes and technology, which is a surprising revelation.
+    - Plotly Scatter chart shows that expenditure for clothing and shoes are considerably stable while for technology, I see some picks. From another Plotly Scatter plot, I see that quantity sale of technology product is the lowest. This shows, customers have appeal towards tech products.
+
+- Costomer may shop mostly clothing, food & beverage and cosmetics
+    - Matplotlib Bar chart shows that customers mostly shop clothing, ood & beverage and cosmetics. Research output seem to be aligned with my hypothesis.
+    - Plotly Scatter chart shows that customers mostly shop clothing. However, though food & beverage and cosmetics are combinedly holding 2nd position in terms of quantity sold, these  products are not among the top three in term of price(or revenue for shop owner).
+
+- 50% of all named shopping malls should have similar performance report
+    - Using Seaborn Scatter plot, we see that Kanyon and Mall of Istanbul are competing with each other very closely and their competitor is Metrocity. Rests are far behind. So, I can say that 20% of malls are performing really well. If I am being very generous, I can say it is 30%. So, my hypotheis in this regard is incorrect.
+    - Apparently both Plotly Scatter and Bar chart re-emphasize the earlier claim. Since Kanyon and Mall of Istanbul malls have highest quantity sold and price(or revenues), it is kind evident that these malls has more customers than others.
+
+- Younger aged customer may pay more for book, food & beverage & older people may spend more money to clothing, cosmetics and technology
+    - From Plotly Box plot, I see that interest across all ages have been around clothing, shoes and technology, whereas rest of the product remained same though price varies. So, my hypotheis is not correct.
+
+- Young people tend to buy more products than older people
+    - Seaborn Heat chart is used to see if there is any correlation between age and quantity or price. I see that age factor is not proportionately influencing quantity and no relation exists with price factor. However, there is a very strong positive relation exists between quantity and price, as expected. So, my hypostheis is incorrect.
+
+- Male may pay more for gadgets or technology than female, while female pays more for clothing and cosmetics
+    - From Plotly Box plot, I see that both male and female have similar interest in clothing, shoes and technology. So, I can safely say that my hypothesis is partially correct.
 
 
 ## Analysis techniques used
@@ -112,6 +138,7 @@ I didn't have any major issues except for two. First is, after creating the clea
 
 I need to spend more time on Machine learning and data visualization. I need to have a good grasp on when and what plot is the best for visualzation. Also, I need to hone my skills in writing functions to better manupulate the data as per requirements.
 
+
 ## Main Data Analysis Libraries
 * Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
 
@@ -132,6 +159,11 @@ I need to spend more time on Machine learning and data visualization. I need to 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
+- Kaggle - Dataset collection
+- Youtube - To get idea how to use color in the graph
+- Various websites - How to fix 'nbformat' issue
+- LMS - To gather knowledge about what functions and visualization tools to use
+
 ### Content 
 
 - The text for the Home page was taken from Wikipedia Article A
@@ -147,3 +179,5 @@ I need to spend more time on Machine learning and data visualization. I need to 
 
 ## Acknowledgements (optional)
 * Thank the people who provided support through this project.
+- John
+- Vasi

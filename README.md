@@ -170,12 +170,6 @@ I need to spend more time on Machine learning and data visualization. I need to 
 - Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
 
 ## Acknowledgements (optional)
 * Thank the people who provided support through this project.
